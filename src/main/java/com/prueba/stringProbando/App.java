@@ -4,7 +4,7 @@ package com.prueba.stringProbando;
  * Hello world!
  *
  */
-import org.springframework.*;
+
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.prueba.stringProbando.Entidades.Familia.Familias;
@@ -14,9 +14,10 @@ public class App
     {
         ClassPathXmlApplicationContext bean = new ClassPathXmlApplicationContext("applicationContext.xml");
         
-        Familias padre = bean.getBean("familia",Familias.class);
+        Familias padre = bean.getBean("padre",Familias.class);
         
-        padre.enviar("Juan");
+        padre.enviar(" Juan");
+        System.out.println(padre.decirProfesion());
         
         bean.close();
     }
