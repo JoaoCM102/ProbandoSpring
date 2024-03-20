@@ -14,14 +14,11 @@ public class App
     {
         ClassPathXmlApplicationContext bean = new ClassPathXmlApplicationContext("applicationContext.xml");
         
-        Familias padre = bean.getBean("padre",Familias.class);
-        Familias madre = bean.getBean("madre",Familias.class); 
-        padre.enviar(" Juan");
-        System.out.println(padre.decirProfesion());
+        Familias hijo = bean.getBean("Hijo",Familias.class);
         
-        madre.enviar(" Juan");
-        System.out.println(madre.decirProfesion());
+        hijo.enviar("Pedro");
         
+        System.out.println(hijo.decirProfesion());
         bean.close();
     }
 }
