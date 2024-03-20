@@ -4,7 +4,7 @@ public class Hijo implements Familias {
 
 	@Override
 	public void enviar(String mensaje) {
-		// TODO Auto-generated method stub
+		System.out.println("Hola soy el hijo" + mensaje);
 		
 	}
 
