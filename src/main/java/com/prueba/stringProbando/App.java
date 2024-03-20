@@ -1,5 +1,7 @@
 package com.prueba.stringProbando;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 /**
  * Hello world!
  *
@@ -7,18 +9,19 @@ package com.prueba.stringProbando;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.prueba.stringProbando.Entidades.Familia.FamiliaConfiguracion;
 import com.prueba.stringProbando.Entidades.Familia.Familias;
 public class App 
 {
     public static void main( String[] args )
     {
-        ClassPathXmlApplicationContext bean = new ClassPathXmlApplicationContext("applicationContext.xml");
+        AnnotationConfigApplicationContext bean = new AnnotationConfigApplicationContext(FamiliaConfiguracion.class);
         
-        Familias hijo = bean.getBean("Hijo",Familias.class);
+        Familias padre = bean.getBean("padre",Familias.class);
         
-        hijo.enviar("Pedro");
+        padre.enviar("Pedro");
         
-        System.out.println(hijo.decirProfesion());
+        System.out.println(padre.decirProfesion());
         bean.close();
     }
 }
