@@ -1,6 +1,7 @@
 package com.prueba.stringProbando.Entidades.Familia;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -14,6 +15,7 @@ public class Hijo implements Familias {
 
 	@Autowired //aqui spring busca en el proyecto una clase que implemente la interfaz decir profesion 
 	public Hijo(DecirProfesion profesion) {
+		
 		this.profesion = profesion;
 	}//el autowired tambien se puede usar en un set, metodo cualquiera o campos de clase
 	

@@ -1,7 +1,16 @@
 package com.prueba.stringProbando.Entidades.Familia;
 
-public class Madre implements Familias {
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
+@Component("Madre")
+public class Madre implements Familias {
+	
+	
+	/*@PostConstructor va aqui pero me da un error imagino que tengo 
+	que descargar la anotacion destroy igual */
+	
     private DecirProfesion profesion;
 	
 	
@@ -17,7 +26,8 @@ public class Madre implements Familias {
 		return "Soy la madre y soy " + profesion.profesion();
 		
 	}
-
+	
+	@Autowired
 	public void setProfesion(DecirProfesion profesion) {
 		this.profesion = profesion;
 	}
