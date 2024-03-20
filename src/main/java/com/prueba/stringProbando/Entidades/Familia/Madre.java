@@ -6,9 +6,6 @@ public class Madre implements Familias {
 	
 	
 
-	public Madre(DecirProfesion profesion) {
-		this.profesion = profesion;
-	}
 	@Override
 	public void enviar(String mensaje) {
 		System.out.println("Hola soy la madre" + mensaje);
@@ -17,8 +14,13 @@ public class Madre implements Familias {
 
 	@Override
 	public String decirProfesion() {
-		return "Soy la madre y soy " + profesion;
+		return "Soy la madre y soy " + profesion.profesion();
 		
 	}
 
+	public void setProfesion(DecirProfesion profesion) {
+		this.profesion = profesion;
+	}
+
+	
 }
