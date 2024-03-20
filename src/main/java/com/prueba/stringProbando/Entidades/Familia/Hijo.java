@@ -1,6 +1,6 @@
 package com.prueba.stringProbando.Entidades.Familia;
 
-public class Padre implements Familias {
+public class Hijo implements Familias {
 
 	@Override
 	public void enviar(String mensaje) {

@@ -1,5 +1,6 @@
 package com.prueba.stringProbando.Entidades.Familia;
 
 public interface Familias {
-	void datos
+	void enviar(String mensaje);
+
 }
